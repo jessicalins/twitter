@@ -1,4 +1,9 @@
 class TweetsController < ApplicationController
+	def index
+		@tweets = current_user.tweets
+  	@tweet = Tweet.new
+	end
+
   def create
   	@tweet = Tweet.new(tweet_params)
 
