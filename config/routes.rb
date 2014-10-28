@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
-  root to: "home#index"
+  get 'tweets/index'
+
+  devise_for :users
+  root to: "welcome#index"
+
+  resources :users do
+    resources :tweets
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
