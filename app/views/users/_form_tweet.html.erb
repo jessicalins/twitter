@@ -1,0 +1,10 @@
+<%= form_for [@user, @tweet] do |f| %>
+	<div class="field">
+		<%= f.text_field :content, class: 'form-control' %>
+	</div>
+	<div class="actions">
+		<span class="input-group-btn">
+			<%= f.submit class: 'btn btn-primary' %>
+		</span>
+	</div>
+<% end %>

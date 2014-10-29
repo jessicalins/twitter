@@ -1,6 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-  	@tweets = current_user.tweets
-  	@tweet = Tweet.new
+  	redirect_to user_path current_user
   end
 end
