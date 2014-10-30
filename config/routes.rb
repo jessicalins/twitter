@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'timeline/index'
+
   get 'tweets/index'
 
   devise_for :users
