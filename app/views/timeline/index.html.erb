@@ -5,11 +5,13 @@
 	    		<caption><h3>Recent tweets</h3></caption>
 	        <% if @tweets %>
 	        	<% @tweets.each do |tweet| %>
-			        <tbody>
-			            <tr>
-			              <td><strong><%= tweet.author %></strong><%= ": #{ tweet.content }" %></td>
-			            </tr>
-			        </tbody>
+	        		<% tweet.each do |t| %>
+				        <tbody>
+				            <tr>
+				              <td><strong><%= t.author %></strong><%= ": #{ t.content }" %></td>
+				            </tr>
+				        </tbody>
+				      <% end %>
 			      <% end %>
 			    <% end %>
 	    </table>

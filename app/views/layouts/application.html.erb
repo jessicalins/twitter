@@ -21,8 +21,8 @@
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="http://0.0.0.0:3000">Home</a></li>
-        <li><a href="/timeline/index">Timeline</a></li>
+        <li class="active"><%= link_to 'Home', root_path, :class => 'navbar-link' %></li>
+        <li><%= link_to 'Timeline', timeline_index_path, :class => 'navbar-link' %></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
 
