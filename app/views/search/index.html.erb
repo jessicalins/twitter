@@ -1,0 +1,21 @@
+<div class="container">
+	<div class="row">
+		<div class="col-lg-6">
+			<h3>Results</h3>
+	    <table class="table table-hover">
+	        <% if @users %>
+	        	<% @users.each do |user| %>
+			        <tbody>
+			            <tr>
+			              <td><strong><%= user.name %></strong></td>
+			              <td><button type="button" class="btn btn-primary">Follow</button></td>
+			            </tr>
+			        </tbody>
+			      <% end %>
+			    <% else %>
+ 							<h4><center>No results founded</center></h4>
+			    <% end %>
+	    </table>
+		</div>
+	</div>
+</div>

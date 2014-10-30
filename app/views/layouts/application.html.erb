@@ -26,16 +26,13 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
 
-      <!-- <form class="navbar-form navbar-left" role="search"> -->
       <%= form_tag(search_index_path, :method => :get, class: 'navbar-form navbar-left', role: 'search') do %>
         <div class="input-group">
           <%= text_field_tag :query, nil, 
           {:class => "form-control", :placeholder => "Search a user"} %>
-          <!-- <input type="text" class="form-control" placeholder="Search"> -->
         </div>
         <button type="submit" class="btn btn-secondary">Submit</button>
       <% end %>
-      <!-- </form> -->
 
       <p class="navbar-text navbar-inverse navbar-right">
           <% if user_signed_in? %>
