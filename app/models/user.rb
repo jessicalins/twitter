@@ -9,6 +9,6 @@ class User < ActiveRecord::Base
   has_many :user_followers
   has_many :followers, through: :user_followers
 
-	has_many :following_users, class_name: 'UserFollower'
-	has_many :following, through: :following_users, source: :follower
+	has_many :following_users, class_name: 'UserFollower', foreign_key: "follower_id"
+	has_many :following, through: :following_users, source: :user
 end

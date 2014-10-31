@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'timeline/index'
   get 'tweets/index'
   get 'search/index'
+  post 'search/follow'
 
   devise_for :users
   root to: "welcome#index"
