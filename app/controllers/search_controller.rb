@@ -1,6 +1,6 @@
 class SearchController < ApplicationController
 	def index
-		@users = User.where("name like ?", params[:query])
+		@users = User.where("username like ?", params[:query])
 	end
 
 	def follow
