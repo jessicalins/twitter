@@ -1,7 +1,5 @@
 class TimelineController < ApplicationController
   def index
-  	@tweets = []
-  	current_user.following.each { |following| @tweets << following.tweets }
-  	@tweets << current_user.tweets #procurar como ordenar os tweets
+  	@tweets = Tweet.where(user_id: [[current_user.id] | current_user.following_ids]).order('created_at DESC')
   end
 end

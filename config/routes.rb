@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'search/index'
   post 'search/follow'
 
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => 'registrations'}
   root to: "welcome#index"
 
   resources :users do

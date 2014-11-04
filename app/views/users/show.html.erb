@@ -5,19 +5,7 @@
 			<div class="input-group">
 				<%= render 'form_tweet' %>
 			</div>
-
-	    <table class="table table-hover">
-	    		<caption><h3>My tweets</h3></caption>
-	        <% if @tweets %>
-	        	<% @tweets.each do |tweet| %>
-			        <tbody>
-			            <tr>
-			              <td><strong><%= tweet.author %></strong><%= ": #{ tweet.content }" %></td>
-			            </tr>
-			        </tbody>
-			      <% end %>
-			    <% end %>
-	    </table>
+	    <%= render 'tweets/listing', caption: "My tweets" %>
 		</div>
 		<div class="col-md-6 .col-md-offset-6">
 			<h2><strong>Your tweets</strong></h2>
