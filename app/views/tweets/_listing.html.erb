@@ -1,14 +1,7 @@
-<table class="table table-hover">
-		<caption><h3><%= caption %></h3></caption>
-    <% if @tweets %>
-			<% @tweets.each do |t| %>
-	      <tbody>
-	          <tr>
-	            <td>
-	            	<%= render 'tweets/tweet', tweet: t %>
-							</td>
-	          </tr>
-	      </tbody>
-		  <% end %>
-		<% end %>
-</table>
+<% if @tweets %>
+	<div class="tweets">
+		<% @tweets.each do |t| %>
+	    <%= render 'tweets/tweet', tweet: t %>
+	  <% end %>
+	</div>
+<% end %>

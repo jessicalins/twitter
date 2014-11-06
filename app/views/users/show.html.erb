@@ -1,15 +1,24 @@
 <div class="container">
-	<h2>What are you doing? :)</h2>
 	<div class="row">
-		<div class="col-lg-6">
+		<div class="col-lg-9">
+			<h2>What are you doing? :)</h2>
 			<div class="input-group">
 				<%= render 'form_tweet' %>
 			</div>
-	    <%= render 'tweets/listing', caption: "My tweets" %>
+	    <%= render 'tweets/listing' %>
 		</div>
-		<div class="col-md-6 .col-md-offset-6">
-			<h2><strong>Your tweets</strong></h2>
-			<h3><%= @tweets.count %></h3> 
+		<div class="col-lg-3">
+			<div class="media">
+			  <a class="pull-left">
+			    <img src=<%= current_user.avatar.thumb.url %> alt=<%= current_user.name %>>
+			  </a>
+			  <div class="media-body">
+			  	<h4 class="media-heading"><%= current_user.username %></h4>
+			  	<%= "#{current_user.tweets.count} tweets" %>
+				</div>	<br>
+				<%= "#{current_user.following.count} following" %>
+				<%= "#{current_user.followers.count} followers" %>
+			</div>
 		</div>
-	</div>
+	</div> 
 </div>

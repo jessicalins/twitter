@@ -1,5 +1,5 @@
 class TimelineController < ApplicationController
   def index
-  	@tweets = Tweet.where(user_id: [[current_user.id] | current_user.following_ids]).order('created_at DESC')
+  	@tweets = current_user.tweets.order('created_at DESC').includes(:user)
   end
 end

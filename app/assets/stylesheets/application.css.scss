@@ -17,6 +17,17 @@
 @import "bootstrap";
 
 .form-tweet {
-	width: 500px;
+	width: 850px;
 	height: 50px;
+}
+
+.actions {
+	margin-bottom: 20px;
+}
+
+.tweets {
+	.media {
+		border-bottom: 2px solid #eee;
+		padding-bottom: 15px;
+	}
 }

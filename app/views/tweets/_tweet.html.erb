@@ -3,7 +3,10 @@
     <img src=<%= tweet.user.avatar.thumb.url %> alt=<%= tweet.user.name %>>
   </a>
   <div class="media-body">
-    <h4 class="media-heading"><%= tweet.user.name %></h4>
-    <p><%= "#{ tweet.content }" %></p>
+  	<p>
+	    <strong><%= tweet.user.username %></strong>
+	    <%= "#{ tweet.content }" %><br>
+	    <i><small><%= tweet.created_at.to_s(:tweet) %></small></i>
+	  </p>
 	</div>	
 </div>
