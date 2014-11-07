@@ -1,7 +1,0 @@
-<% if @tweets %>
-	<div class="tweets">
-		<% @tweets.each do |t| %>
-	    <%= render 'timeline/tweet', tweet: t %>
-	  <% end %>
-	</div>
-<% end %>
