@@ -22,8 +22,7 @@
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li class="active"><%= link_to 'Home', root_path, :class => 'navbar-link' %></li>
-        <li><%= link_to 'Timeline', timeline_index_path, :class => 'navbar-link' %></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><%= link_to 'Profile', timeline_index_path, :class => 'navbar-link' %></li>
       </ul>
 
       <%= form_tag(search_index_path, :method => :get, class: 'navbar-form navbar-left', role: 'search') do %>

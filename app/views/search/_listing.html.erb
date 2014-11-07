@@ -1,0 +1,9 @@
+<% if users %>
+	<div class="tweets">
+		<% users.each do |user| %>
+	    <%= render 'search/user', user: user %>
+	  <% end %>
+	</div>
+<% else %>
+	<h4><center>No results founded</center></h4>
+<% end %>

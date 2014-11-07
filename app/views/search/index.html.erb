@@ -2,20 +2,7 @@
 	<div class="row">
 		<div class="col-lg-6">
 			<h3>Results</h3>
-	    <table class="table table-hover">
-	        <% if @users %>
-	        	<% @users.each do |user| %>
-			        <tbody>
-			            <tr>
-			              <td><strong><%= user.name %></strong></td>
-			              <td><%= button_to "Follow", search_follow_path(user, id: user.id), method: :post, class: "btn btn-primary"  %></td>
-			            </tr>
-			        </tbody>
-			      <% end %>
-			    <% else %>
- 							<h4><center>No results founded</center></h4>
-			    <% end %>
-	    </table>
+      <%= render 'search/listing', users: @users %>
 		</div>
 	</div>
 </div>

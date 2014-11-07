@@ -1,0 +1,15 @@
+<div class="media">
+	<a class="pull-left">
+		<img src=<%= user.avatar.thumb.url %> alt=<%= user.username %>>
+	</a>
+	<div class="media-body">
+    <p>
+      <strong><%= user.username %></strong>
+      <% if user.followers.include?(current_user) %>
+        <h4><span class="label label-success">Following</span></h4>
+      <% else %>
+        <%= button_to "Follow", search_follow_path(user, id: user.id), method: :post, class: "btn btn-primary btn-sm"  %>
+      <% end %>
+    </p>
+	</div>
+</div>

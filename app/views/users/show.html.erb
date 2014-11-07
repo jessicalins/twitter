@@ -8,16 +8,16 @@
 	    <%= render 'tweets/listing' %>
 		</div>
 		<div class="col-lg-3">
-			<div class="media">
+			<div class="media info">
 			  <a class="pull-left">
 			    <img src=<%= current_user.avatar.thumb.url %> alt=<%= current_user.name %>>
 			  </a>
 			  <div class="media-body">
-			  	<h4 class="media-heading"><%= current_user.username %></h4>
+			  	<h3 class="media-heading"><%= current_user.username %></h3>
 			  	<%= "#{current_user.tweets.count} tweets" %>
 				</div>	<br>
-				<%= "#{current_user.following.count} following" %>
-				<%= "#{current_user.followers.count} followers" %>
+				<h4><%= "#{current_user.following.count} following" %></h4>
+				<h4><%= "#{current_user.followers.count} followers" %></h4>
 			</div>
 		</div>
 	</div> 
