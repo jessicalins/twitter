@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'timeline/index'
+  get 'followers/index'
+  get 'profile/index'
   get 'tweets/index'
   get 'search/index'
   post 'search/follow'
