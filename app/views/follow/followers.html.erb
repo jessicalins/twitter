@@ -1,0 +1,8 @@
+<div class="container">
+	<div class="row">
+		<div class="col-lg-6">
+			<h3>Your <%= @followers.count %> followers</h3>
+			<%= render 'follow/listing', users: @followers %>
+		</div>
+	</div>
+</div>

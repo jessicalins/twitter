@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   get 'followers/index'
-  get 'profile/index'
   get 'tweets/index'
   get 'search/index'
   post 'search/follow'
@@ -10,6 +9,7 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :tweets
+    resources :follow
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

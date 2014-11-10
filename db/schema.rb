@@ -23,12 +23,6 @@ ActiveRecord::Schema.define(version: 20141103165125) do
 
   add_index "tweets", ["user_id"], name: "index_tweets_on_user_id"
 
-  create_table "twetts", force: true do |t|
-    t.text     "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "user_followers", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
