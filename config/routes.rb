@@ -9,7 +9,10 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :tweets
-    resources :follow
+    resources :follow do
+      get :following, on: :collection
+      get :followers, on: :collection
+    end  
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
