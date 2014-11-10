@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-lg-6">
-			<h3><%= "#{@user.name}\'s #{@followers.count} followers" %></h3>
+			<h3><%= "#{@user.name}\'s #{@followers.count} followers" %></h3><br>
 			<%= render 'follow/listing', users: @followers %>
 		</div>
 	</div>

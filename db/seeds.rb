@@ -31,6 +31,6 @@ User.all.each do |user|
 		Tweet.create! data
 	end
 
-	samples = users.sample(2)
+	samples = User.all.sample(2)
 	user.user_followers.create(user_id: samples[0].id, follower_id: samples[1].id) if samples[0].id != samples[1].id
 end

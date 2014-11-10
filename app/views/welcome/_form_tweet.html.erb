@@ -1,7 +1,7 @@
 <%= form_for [@user, @tweet] do |f| %>
 	<div class="field">
-		<span class="input-group input-group-lg form-tweet">
-			<%= f.text_field :content, class: 'form-control' %>
+		<span class="input-group input-group-lg form-tweet" id="tweet_input">
+			<%= f.text_field :content, class: 'form-control', id: 'tweet_content' %>
 		</span>
 	</div>
 	<div class="actions" style="text-align: right;">
