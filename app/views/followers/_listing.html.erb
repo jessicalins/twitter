@@ -1,7 +1,0 @@
-<% if @followers %>
-	<div class="tweets">
-		<% @followers.each do |follower| %>
-	    <%= render 'followers/follower', follower: follower %>
-	  <% end %>
-	</div>
-<% end %>
