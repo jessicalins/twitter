@@ -1,6 +1,6 @@
-<% if @users %>
+<% if users %>
 	<div class="tweets">
-		<% @users.each do |user| %>
+		<% users.each do |user| %>
 	    <%= render 'follow/user', user: user %>
 	  <% end %>
 	</div>

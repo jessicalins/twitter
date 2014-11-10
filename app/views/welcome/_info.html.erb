@@ -6,6 +6,6 @@
   	<h3 class="media-heading"><%= current_user.username %></h3>
   	<%= "#{current_user.tweets.count} tweets" %>
 	</div>	<br>
-	<h4><%= "#{current_user.following.count} following" %></h4>
-	<h4><%= "#{current_user.followers.count} followers" %></h4>
+	<h4><%= link_to "#{current_user.following.count} following", following_user_follow_index_path(current_user.id) %></h4>
+	<h4><%= link_to "#{current_user.followers.count} followers", followers_user_follow_index_path(current_user.id) %></h4>
 </div>
