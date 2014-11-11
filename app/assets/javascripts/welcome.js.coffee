@@ -2,7 +2,8 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 jQuery ->
-	$('#tweet_input').keypress (evt) ->
-  	input = $('#tweet_content').val()
-  	if (140 - input.length) < 0
-  		alert(input.length)
+	$('#tweet_input').keypress ->
+  	input = $('#tweet_content').val().length
+  	limit = $('#tweet_content').attr('maxlength') 
+  	remain = limit - input
+  	$('#counter_text').text(remain)
