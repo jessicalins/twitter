@@ -7,8 +7,12 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => {:registrations => 'registrations'}
   root to: "welcome#index"
 
+  resources :tweets do 
+      get :find_new_tweets, on: :collection
+    end
+
   resources :users do
-    resources :tweets
+    resources :tweets 
     resources :follow do
       get :following, on: :collection
       get :followers, on: :collection
