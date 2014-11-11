@@ -11,7 +11,7 @@ $(document).on 'ready page:load', ->
   	remain = limit - input
   	$('#counter_text').text(remain)
 
-	  if remain == 0 || input == 0
+	  if input == 0
 	  	$('#tweet_button').prop 'disabled', true
 	  else 
 	  	$('#tweet_button').prop 'disabled', false
