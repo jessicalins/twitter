@@ -1,0 +1,5 @@
+<% if @new_tweets.blank? %>
+	$('#new_tweets').html('<p class="lead blank_state>No tweets found</p>');
+<% else %>
+	$('#new_tweets').html('<p class="lead blank_state">View #{@new_tweets.count} new Tweets</p>');
+<% end %>

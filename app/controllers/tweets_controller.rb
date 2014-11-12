@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-  respond_to :html, :json
+  before_action :set_tweets
 
 	def index
 		@tweets = current_user.tweets
@@ -21,10 +21,12 @@ class TweetsController < ApplicationController
   	params.require(:tweet).permit(:content)
   end
 
+  def set_tweets
+    @all_tweets = Tweet.where(user_id: [[current_user.id] | current_user.following_ids]).order('created_at DESC')
+  end
+
   def find_new_tweets
-    last_tweet = Tweet.last
-    new_tweets = Tweet.where("created_at > ?", last_tweet.created_at)
-    tweets = Tweet.all
-    respond_with tweets
+    @last_tweet = @all_tweets.first
+    @new_tweets = Tweet.where("created_at > ?", @last_tweet.created_at) 
   end
 end
