@@ -15,9 +15,7 @@ $(document).on 'ready page:load', ->
 	  	$('#tweet_button').prop 'disabled', true
 	  else 
 	  	$('#tweet_button').prop 'disabled', false
-
-	setInterval ajaxCall, 30000
-
-	ajaxCall = ->
-		$.ajax
-			url: "http://0.0.0.0:3000/tweets/find_new_tweets"
+  
+$(document).on 'click', '#tweet_first_input', ->
+	$(this).hide()
+	$('#tweet_form').removeClass('hide')

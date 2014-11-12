@@ -1,4 +1,4 @@
-<%= form_for [@user, @tweet] do |f| %>
+<%= form_for [@user, @tweet], html: { class: 'hide', id: 'tweet_form' } do |f| %>
 	<div class="field">
 		<span class="input-group input-group-lg form-tweet" id="tweet_input">
 			<%= f.text_field :content, class: 'form-control', id: 'tweet_content', maxlength: 140 %>
@@ -10,3 +10,7 @@
 		</span>
 	</div>
 <% end %>
+
+<span class="input-group input-group-lg tweet_first_form" id="tweet_first_input">
+	<input type="text" class="form-control">
+</span>
