@@ -1,4 +1,5 @@
 class TweetsController < ApplicationController
+  respond_to :html, :js
   before_action :set_tweets
 
 	def index
@@ -11,7 +12,7 @@ class TweetsController < ApplicationController
     @tweet.author = current_user.name
 
     if @tweet.save
-      redirect_to user_path current_user
+      respond_with @tweet, location: user_path(current_user)
     else
       flash[:error] = 'Try again!'
     end

@@ -19,3 +19,4 @@ $(document).on 'ready page:load', ->
 $(document).on 'click', '#tweet_first_input', ->
 	$(this).hide()
 	$('#tweet_form').removeClass('hide')
+	$('#tweet_content').focus()
