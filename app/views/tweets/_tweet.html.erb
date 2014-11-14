@@ -1,4 +1,4 @@
-<li class="media">
+<li class="media" id="tweet-<%= tweet.id %>">
   <a class="pull-left">
     <img src=<%= tweet.user.avatar.thumb.url %> alt=<%= tweet.user.name %>>
   </a>
@@ -7,6 +7,9 @@
 	    <strong><%= tweet.user.username %></strong>
 	    <%= "#{ tweet.content }" %><br>
 	    <i><small><%= tweet.created_at.to_s(:tweet) %></small></i>
+	    <% if current_user.tweets.exists?(tweet) %>
+	    	<%= link_to "Delete", tweet, remote: true, method: :delete %>
+  		<% end %>
 	  </p>
 	</div>	
 </li>

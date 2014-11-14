@@ -18,6 +18,12 @@ class TweetsController < ApplicationController
     end
   end
 
+  def destroy
+    @tweet = Tweet.find(params[:id])
+    @tweet.destroy
+    respond_with @tweet, location: user_path(current_user)
+  end
+
   def tweet_params
   	params.require(:tweet).permit(:content)
   end
