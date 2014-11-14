@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   root to: "welcome#index"
 
   resources :tweets do 
-      get :find_new_tweets, on: :collection
-    end
+    get :find_new_tweets, on: :collection
+  end
 
   resources :users do
     resources :tweets 

@@ -2,9 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.tweets {
+.tweets_list {
+	padding-left: 0;
 	.media {
 		border-bottom: 2px solid #eee;
 		padding-bottom: 15px;
 	}
+}
+
+.form-tweet {
+	width: 850px;
+	height: 50px;
+}
+
+.tweet_first_form {
+	width: 850px;
+}
+
+#tweet_first_input {
+	padding-bottom: 30px;
 }
