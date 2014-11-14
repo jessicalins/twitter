@@ -5,6 +5,22 @@
 	margin-bottom: 20px;
 }
 
-.info {
-	border-bottom: 2px solid #eee;
+#user_info {
+	padding-top: 15px;
+}
+
+#wrapper {
+	background: #67CBF7;
+}
+
+#content {
+	min-height: 500px;
+	padding-bottom: 15px;
+	background: #FFFFFF;
+}
+
+#sidebar {
+	a {
+		color: #00688B;
+	}
 }

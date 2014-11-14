@@ -1,11 +1,11 @@
-<div class="container">
+<div class="container" id="wrapper">
 	<div class="row">
-		<div class="col-lg-6">
+		<div class="col-lg-9" id="content">
 			<%= render 'users/info_profile' %>
-	    <%= render 'users/listing' %>
+	    <%= render 'tweets/listing' %>
 		</div>
-		<div class="col-lg-3">
-			<%= render 'users/info' %>
+		<div class="col-lg-3" id="sidebar">
+			<%= render 'users/info', user: @user %>
 		</div>
 	</div>
 </div>

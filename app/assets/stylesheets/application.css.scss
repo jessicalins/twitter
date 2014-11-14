@@ -15,3 +15,11 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+	background: whitesmoke;
+}
+
+.navbar-inverse {
+	margin-bottom: 0px;
+}

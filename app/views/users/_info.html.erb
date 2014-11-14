@@ -1,4 +1,6 @@
-<strong>Name </strong><%= @user.name %> <br>
-<strong>Tweets </strong><%= "#{@user.tweets.count}" %>
-<h4><%= link_to "#{@user.following.count} following", following_user_follow_index_path(@user.id) %></h4>
-<h4><%= link_to "#{@user.followers.count} followers", followers_user_follow_index_path(@user.id) %></h4>
+<div id="info">
+	<strong>Name </strong><%= user.name %> <br>
+	<strong>Tweets </strong><%= "#{user.tweets.count}" %>
+	<h4><%= link_to "#{user.following.count} following", following_user_follow_index_path(user.id) %></h4>
+	<h4><%= link_to "#{user.followers.count} followers", followers_user_follow_index_path(user.id) %></h4>
+</div>

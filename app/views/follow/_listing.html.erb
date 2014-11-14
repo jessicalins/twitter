@@ -1,5 +1,5 @@
 <% if users %>
-	<div class="tweets">
+	<div class="tweets tweets_list">
 		<% users.each do |user| %>
 	    <%= render 'follow/user', user: user %>
 	  <% end %>

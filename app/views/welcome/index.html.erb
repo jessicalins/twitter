@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container" id="wrapper">
   <div class="row">
-    <div class="col-lg-9">
+    <div class="col-lg-9" id="content">
       <h2>What are you doing? :) <h4 align="right" id="counter_text">140</h4></h2>
       <div class="input-group">
         <%= render 'form_tweet' %>
@@ -8,7 +8,7 @@
       <div id="new_tweets"></div>
       <%= render 'tweets/listing' %>
     </div>
-    <div class="col-lg-3">
+    <div class="col-lg-3" id="sidebar">
       <%= render 'welcome/info' %>
     </div>
   </div> 
