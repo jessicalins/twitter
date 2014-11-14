@@ -15,6 +15,9 @@ $(document).on 'ready page:load', ->
 	  	$('#tweet_button').prop 'disabled', true
 	  else 
 	  	$('#tweet_button').prop 'disabled', false
+
+	$("#tweet_form").bind "ajax:complete", ->
+  	$("#tweet_content").val ""
   
 $(document).on 'click', '#tweet_first_input', ->
 	$(this).hide()
