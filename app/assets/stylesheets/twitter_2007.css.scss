@@ -11,10 +11,11 @@ html .container {
 }
 
 html .navbar {
-  margin-top: 20px;
+  margin-top: 12px;
+  min-height: 40px;
 
   .navbar-nav {
-    margin-top: 10px;
+    margin-top: 0px;
     padding-left: 10px;
     padding-right: 10px;
     background: white;
@@ -29,8 +30,8 @@ html .navbar {
 
 html .navbar-brand {
   background: url(image_path('logo.png')) no-repeat 0 0;
-  width: 240px;
-  height: 55px;
+  width: 173px;
+  height: 40px;
   background-size: 100%;
   text-indent: -9999px;
   overflow: hidden;
@@ -54,7 +55,7 @@ html #content {
 
   .arrow {
     top: 0px;
-    left: 58px;
+    left: 50px;
   }
 }
 
