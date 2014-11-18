@@ -55,12 +55,12 @@ html #content {
 
   .arrow {
     top: 0px;
-    left: 50px;
+    left: 35px;
   }
 }
 
 .arrow {
-  border-width: 10px;
+  border-width: 13px;
   position: absolute;
   display: block;
   width: 0;
@@ -69,15 +69,15 @@ html #content {
   border-style: solid;
 
   &:after {
-    border-width: 11px;
+    border-width: 14px;
     content: "";
   }
 
   &.arrow-top {
     border-bottom-color: white;
     border-top-width: 0;
-    top: -10px;
-    margin-top: -10px;
+    top: -13px;
+    margin-top: -13px;
   }
 }
 
