@@ -1,5 +1,5 @@
 <% if @tweets %>
-	<ul class="unstyled tweets_list" id="tweets">
+	<ul class="list-unstyled tweets_list" id="tweets">
 		<% @tweets.each do |t| %>
 	    <%= render 'tweets/tweet', tweet: t %>
 	  <% end %>

@@ -1,14 +1,19 @@
 <div class="container" id="wrapper">
   <div class="row">
-    <div class="col-lg-9" id="content">
-      <h2>What are you doing? :) <h4 align="right" id="counter_text">140</h4></h2>
-      <div class="input-group">
-        <%= render 'form_tweet' %>
+    <div class="col-sm-9" id="content">
+      <div class="arrow arrow-top"></div>
+      <div id="compose-tweet">
+        <h2>What are you doing? :) <h4 align="right" id="counter_text">140</h4></h2>
+        <div class="input-group">
+          <%= render 'form_tweet' %>
+        </div>
       </div>
+
       <div id="new_tweets"></div>
+      <h2 class="section-title">Home</h2>
       <%= render 'tweets/listing' %>
     </div>
-    <div class="col-lg-3" id="sidebar">
+    <div class="col-sm-3" id="sidebar">
       <%= render 'welcome/info' %>
     </div>
   </div> 

@@ -5,20 +5,21 @@
 .tweets_list {
 	padding-left: 0;
 	.media {
-		border-bottom: 2px solid #eee;
+		border-bottom: 1px solid #eee;
 		padding-bottom: 15px;
 	}
 }
 
 .form-tweet {
-	width: 850px;
 	height: 50px;
 }
 
-.tweet_first_form {
-	width: 850px;
+#tweet_first_input {
+  padding-bottom: 30px;
 }
 
-#tweet_first_input {
-	padding-bottom: 30px;
+.tweets_list small {
+  color: #999;
+  font-style: normal;
+  font-size: 11px;
 }
