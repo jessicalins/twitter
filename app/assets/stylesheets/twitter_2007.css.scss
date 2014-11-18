@@ -1,0 +1,117 @@
+$primary_color: #4393de;
+$bg_color: #a9e2e9;
+$side_color: #d9f8fb;
+
+html body {
+  background: $bg_color;
+}
+
+html .container {
+  width: 970px;
+}
+
+html .navbar {
+  margin-top: 20px;
+
+  .navbar-nav {
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: white;
+    border-radius: 6px;
+    margin-right: -15px;
+
+    > li > a {
+      padding: 7px 10px;
+    }
+  }
+}
+
+html .navbar-brand {
+  background: url(image_path('logo.png')) no-repeat 0 0;
+  width: 240px;
+  height: 55px;
+  background-size: 100%;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+html .navbar > .container .navbar-brand {
+  margin-left: -15px;
+}
+
+html #wrapper {
+  background: $side_color;
+}
+
+html #wrapper {
+  border-radius: 6px;
+}
+html #content {
+  position: relative;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+
+  .arrow {
+    top: 0px;
+    left: 58px;
+  }
+}
+
+.arrow {
+  border-width: 10px;
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+
+  &:after {
+    border-width: 11px;
+    content: "";
+  }
+
+  &.arrow-top {
+    border-bottom-color: white;
+    border-top-width: 0;
+    top: -10px;
+    margin-top: -10px;
+  }
+}
+
+#compose-tweet {
+  position: relative;
+
+  .input-group {
+    width: 100%;
+  }
+
+  #counter_text {
+    position: absolute;
+    top: 3px;
+    right: 0;
+    color: #999;
+    font-size: 24px;
+    margin-top: 0;
+  }
+}
+
+#compose-tweet h2, h2.section-title {
+  font-weight: normal;
+  font-size: 21px;
+}
+
+h2.section-title {
+  margin-top: 0;
+  border-bottom: 1px solid #EEE;
+  padding-bottom: 10px;
+}
+
+a, a:visited, a:active {
+  color: $primary_color;
+}
+
+.tweet-author {
+  font-weight: bold;
+}
