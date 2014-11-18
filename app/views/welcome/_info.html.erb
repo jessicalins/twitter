@@ -1,11 +1,32 @@
-<div class="media info" id="user_info">
+<div class="media info" id="user-info">
   <a class="pull-left">
-    <img src=<%= current_user.avatar.thumb.url %> alt=<%= current_user.name %>>
+    <img src=<%= current_user.avatar.thumb.url %> alt=<%= current_user.name %> id="img-profile-info">
   </a>
   <div class="media-body">
-  	<h3 class="media-heading"><%= current_user.username %></h3>
-  	<%= "#{current_user.tweets.count} tweets" %>
-	</div>	<br>
-	<h4><%= link_to "#{current_user.following.count} following", following_user_follow_index_path(current_user.id) %></h4>
-	<h4><%= link_to "#{current_user.followers.count} followers", followers_user_follow_index_path(current_user.id) %></h4>
+  	<%= link_to "#{current_user.name}", user_path(current_user.id), id: 'user-name' %>
+  	<small><%= "#{current_user.tweets.count} tweets" %></small>
+	</div>
+</div>
+<div class='row' id='follow-info'>
+	<div class='col-sm-4'>
+		<%= link_to following_user_follow_index_path(current_user.id) do %>
+			<%= current_user.following.count %>
+			<small>following</small>
+	  <% end %>
+  </div>
+	<div class='col-sm-4'>
+		<%= link_to followers_user_follow_index_path(current_user.id) do %>
+			<%= current_user.followers.count %>
+			<small>followers</small>
+		<% end %>
+	</div>
+	<div class='col-sm-4'></div>
+</div>
+<div class="list-group home-links">
+  <a href="#" class="list-group-item active">
+    Home
+  </a>
+  <a href="#" class="list-group-item">@<%= current_user.name %></a>
+  <a href="#" class="list-group-item">Direct Messages</a>
+  <a href="#" class="list-group-item">Favorites</a>
 </div>

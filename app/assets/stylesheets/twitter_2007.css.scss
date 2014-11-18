@@ -48,6 +48,7 @@ html #wrapper {
 html #wrapper {
   border-radius: 6px;
 }
+
 html #content {
   position: relative;
   border-top-left-radius: 6px;
@@ -56,6 +57,13 @@ html #content {
   .arrow {
     top: 0px;
     left: 35px;
+  }
+}
+
+#sidebar {
+  small {
+    font-size: 12px;
+    line-height: 14px;
   }
 }
 
@@ -81,6 +89,27 @@ html #content {
   }
 }
 
+.media {
+  margin-bottom: 5px;
+}
+
+#user-info {
+  margin-top: 15px;
+
+  #img-profile-info {
+    width: 40px;
+    height: 40px;
+  }
+
+  #follow-info {
+    margin-top: 5px;
+  }
+}
+
+#user-name {
+  font-weight: bold;
+}
+
 #compose-tweet {
   position: relative;
 
@@ -103,6 +132,16 @@ html #content {
   font-size: 21px;
 }
 
+.home-links a {
+  background: none;
+  border: none;
+  box-shadow: none;
+  line-height: 5px;
+  font-size: 14px;
+  margin-top: 15px;
+  padding-left: 1px;
+}
+
 h2.section-title {
   margin-top: 0;
   border-bottom: 1px solid #EEE;
@@ -116,4 +155,8 @@ a, a:visited, a:active {
 
 .tweet-author {
   font-weight: bold;
+}
+
+#user-info small, #user-info a, #follow-info small, #follow-info a {
+  display: block;
 }
