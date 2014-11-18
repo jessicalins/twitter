@@ -7,6 +7,7 @@
       </div>
       <div id="new_tweets"></div>
       <%= render 'tweets/listing' %>
+      <%= paginate @tweets %>
     </div>
     <div class="col-lg-3" id="sidebar">
       <%= render 'welcome/info' %>
