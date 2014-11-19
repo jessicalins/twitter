@@ -10,19 +10,23 @@
 <div class='row' id='follow-info'>
 	<div class='col-sm-4'>
 		<%= link_to following_user_follow_index_path(current_user.id) do %>
-			<%= current_user.following.count %>
+			<strong><%= current_user.following.count %></strong>
 			<small>following</small>
 	  <% end %>
   </div>
 	<div class='col-sm-4'>
 		<%= link_to followers_user_follow_index_path(current_user.id) do %>
-			<%= current_user.followers.count %>
+			<strong><%= current_user.followers.count %></strong>
 			<small>followers</small>
 		<% end %>
 	</div>
 	<div class='col-sm-4'></div>
 </div>
-<div class="list-group home-links">
+<div id='ads'>
+	<a href='https://play.google.com/store/apps/details?id=com.twitter.android&hl=pt_BR'>Twitter-for-Android</a>
+	<em>n.</em> the official Twitter app for Android phones.
+</div>
+<div class="list-group menu">
   <a href="#" class="list-group-item active">
     Home
   </a>

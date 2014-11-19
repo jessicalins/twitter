@@ -1,6 +1,7 @@
 $primary_color: #4393de;
 $bg_color: #a9e2e9;
 $side_color: #d9f8fb;
+$light_primary_color: #e1ffff;
 
 html body {
   background: $bg_color;
@@ -132,14 +133,37 @@ html #content {
   font-size: 21px;
 }
 
-.home-links a {
+.menu {
+  margin-top: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+html .menu a {
   background: none;
   border: none;
   box-shadow: none;
-  line-height: 5px;
+  line-height: 15px;
   font-size: 14px;
-  margin-top: 15px;
-  padding-left: 1px;
+  padding-left: 15px;
+  border-radius: 0;
+
+  &.active {
+    background: $light_primary_color;
+    font-weight: bold;
+
+    &:hover {
+      background: $light_primary_color;
+    }
+
+    &:visited {
+      background-color: $light_primary_color;
+    }
+  }
+
+  &:hover {
+    background-color: $light_primary_color;
+  }
 }
 
 h2.section-title {
@@ -158,5 +182,22 @@ a, a:visited, a:active {
 }
 
 #user-info small, #user-info a, #follow-info small, #follow-info a {
+  display: block;
+}
+
+#user-info small, #follow-info small {
+  color: $primary_color;
+}
+
+#ads {
+  margin-top: 15px;
+  margin-right: 15px;
+  background-color: $light_primary_color;
+  padding: 10px;
+  color: $primary_color;
+}
+
+#ads a {
+  font-weight: bold;
   display: block;
 }
