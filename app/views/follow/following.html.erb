@@ -1,7 +1,12 @@
 <div class="container" id="wrapper">
 	<div class="row">
 		<div class="col-lg-9" id="content">
-			<h3><%= "#{@user.name} is following #{@following.count} people" %></h3><br>
+			<div class="arrow arrow-top"></div>
+			<% if @user.eql?(current_user) %>
+				<h3><%= "You are following #{@following.count} people" %></h3><br>
+			<% else %>
+				<h3><%= "#{@user.name} is following #{@following.count} people" %></h3><br>
+			<% end %>
 			<%= render 'follow/listing', users: @following %>
 		</div>
 		<div class="col-lg-3" id="sidebar">

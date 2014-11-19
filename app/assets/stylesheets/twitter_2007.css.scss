@@ -189,7 +189,13 @@ a, a:visited, a:active {
   color: $primary_color;
 }
 
+#info {
+  color: $primary_color;
+}
+
 #ads {
+  font-size: 13px;
+  line-height: 16px;
   margin-top: 15px;
   margin-right: 15px;
   background-color: $light_primary_color;
