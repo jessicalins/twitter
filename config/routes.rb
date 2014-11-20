@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   resources :users do
     resources :tweets 
     resources :follow do
+      get :follow, on: :collection
+      get :unfollow, on: :collection
       get :following, on: :collection
       get :followers, on: :collection
     end  
