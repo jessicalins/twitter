@@ -1,6 +1,7 @@
-<div class="container">
+<div class="container" id="wrapper">
   <div class="row">
-    <div class="col-lg-6">
+    <div class="col-sm-9" id="content">
+      <div class="arrow arrow-top"></div>
       <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -36,6 +37,10 @@
       <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-primary' %></p>
 
       <%= link_to "Back", :back %>
+    </div>
+
+    <div class="col-sm-3" id="sidebar">
+      <%= render 'welcome/info' %>
     </div>
   </div>
 </div>
