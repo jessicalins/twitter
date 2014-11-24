@@ -18,6 +18,12 @@ $(document).on 'ready page:load', ->
 
 	$("#tweet_form").bind "ajax:complete", ->
   	$("#tweet_content").val ""
+
+$(document).on 'ready page:load', ->
+	$("#tweets .page").infinitescroll
+	  navSelector: "nav.pagination" # selector for the paged navigation (it will be hidden)
+	  nextSelector: "nav.pagination a[rel=next]" # selector for the NEXT link (to page 2)
+	  itemSelector: "#tweets tr.tweet" # selector for all items you'll retrieve
   
 $(document).on 'click', '#tweet_first_input', ->
 	$(this).hide()
