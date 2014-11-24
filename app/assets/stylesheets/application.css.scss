@@ -20,6 +20,18 @@ body {
 	background: whitesmoke;
 }
 
+#infscr-loading {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#infscr-loading div {
+    margin-left: auto;
+    margin-right: auto;
+    width: 360px;
+}
+
 .navbar-inverse {
 	margin-bottom: 0px;
 }
