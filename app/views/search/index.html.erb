@@ -2,10 +2,11 @@
 	<div class="row">
 		<div class="col-lg-9" id="content">
 			<h3>Results</h3>
-      <%= render 'search/listing', users: @users %>
+      <%= render 'follow/listing', users: @users %>
 		</div>
 		<div class="col-lg-3" id="sidebar">
-      <%= render 'users/info', user: current_user %>
+      <%= render 'welcome/info', user: current_user %>
+      <%= render 'welcome/form_search' %>
     </div>
 	</div>
 </div>
