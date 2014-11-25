@@ -1,1 +1,3 @@
-$('#tweets').prepend("<%= j render 'tweets/tweet', tweet: @tweet %>")
+$('#tweets').prepend("<%= j render 'tweets/tweet', tweet: @tweet %>");
+var tweets_count = parseInt($('#tweets-count').text(), 10) + 1;
+$('#tweets-count').replaceWith('<span id="tweets-count">' + tweets_count + ' tweets</span>');
