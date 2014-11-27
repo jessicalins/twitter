@@ -24,7 +24,7 @@
         <li class="active"><%= link_to 'Home', root_path %></li>
         <li>
           <% if current_user %>
-            <%= link_to 'Profile', user_path(current_user.id) %>
+            <%= link_to 'Profile', user_path(current_user) %>
           <% end %>
         </li>
         <li><%= link_to 'Settings', edit_user_registration_path %></li>

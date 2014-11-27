@@ -3,19 +3,19 @@
     <img src=<%= current_user.avatar.thumb.url %> alt=<%= current_user.name %> id="img-profile-info">
   </a>
   <div class="media-body">
-  	<%= link_to "#{current_user.name}", user_path(current_user.id), id: 'user-name' %>
+  	<%= link_to "#{current_user.name}", user_path(current_user), id: 'user-name' %>
   	<small><span id="tweets-count"><%= "#{current_user.tweets.count} tweets" %></span></small>
 	</div>
 </div>
 <div class='row' id='follow-info'>
 	<div class='col-sm-4'>
-		<%= link_to following_user_follow_index_path(current_user.id) do %>
+		<%= link_to following_user_follow_index_path(current_user) do %>
 			<strong><%= current_user.following.count %></strong>
 			<small>following</small>
 	  <% end %>
   </div>
 	<div class='col-sm-4'>
-		<%= link_to followers_user_follow_index_path(current_user.id) do %>
+		<%= link_to followers_user_follow_index_path(current_user) do %>
 			<strong><%= current_user.followers.count %></strong>
 			<small>followers</small>
 		<% end %>
