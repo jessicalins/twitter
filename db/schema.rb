@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141119210306) do
+ActiveRecord::Schema.define(version: 20141126183202) do
+
+  create_table "mentions", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "tweet_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "mentions", ["tweet_id"], name: "index_mentions_on_tweet_id"
+  add_index "mentions", ["user_id"], name: "index_mentions_on_user_id"
 
   create_table "tweets", force: true do |t|
     t.text     "content"
