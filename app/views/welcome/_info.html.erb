@@ -4,7 +4,7 @@
   </a>
   <div class="media-body">
   	<%= link_to "#{current_user.name}", user_path(current_user), id: 'user-name' %>
-  	<small><span id="tweets-count"><%= "#{current_user.tweets.count} tweets" %></span></small>
+  	<small><span id="tweets-count"><%= "#{current_user.tweets.count}" %></span> tweets</small>
 	</div>
 </div>
 <div class='row' id='follow-info'>

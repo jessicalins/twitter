@@ -3,7 +3,7 @@
 		<img src=<%= user.avatar.thumb.url %> alt=<%= user.username %>>
 	</a>
 	<div class="media-body">
-    <strong><%= link_to user.username, user_path(user.id) %></strong>
+    <strong><%= link_to user.username, user_path(user) %></strong>
     <small><%= user.name %></small>
     <div class='row'>
 			<div class='col-sm-10'>
