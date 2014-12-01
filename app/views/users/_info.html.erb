@@ -4,13 +4,13 @@
 	<strong>Tweets </strong><span id="tweets-count"><%= "#{user.tweets.count}" %></span>
 	<div class='row' id='follow-info'>
 		<div class='col-sm-4'>
-			<%= link_to following_user_follow_index_path(user.id) do %>
+			<%= link_to following_user_follow_index_path(user) do %>
 				<strong><%= user.following.count %></strong>
 				<small>following</small>
 		  <% end %>
 		</div>
 		<div class='col-sm-4'>
-			<%= link_to followers_user_follow_index_path(user.id) do %>
+			<%= link_to followers_user_follow_index_path(user) do %>
 				<strong><%= user.followers.count %></strong>
 				<small>followers</small>
 			<% end %>
