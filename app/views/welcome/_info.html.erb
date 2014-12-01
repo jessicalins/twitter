@@ -30,7 +30,7 @@
   <a href="#" class="list-group-item active">
     Home
   </a>
-  <a href="#" class="list-group-item">@<%= current_user.name %></a>
+  <%= link_to "@#{current_user.name.gsub(/\s+/, "")}", mentions_show_path(current_user), class: 'list-group-item' %>
   <a href="#" class="list-group-item">Direct Messages</a>
   <a href="#" class="list-group-item">Favorites</a>
 </div>

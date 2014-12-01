@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'mentions/show'
+
   get 'followers/index'
   get 'tweets/index'
   get 'search/index'

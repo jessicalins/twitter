@@ -1,0 +1,21 @@
+<div class="container" id="wrapper">
+  <div class="row">
+    <div class="col-sm-9" id="content">
+      <div class="arrow arrow-top"></div>
+      <div id="compose-tweet">
+        <h2>What are you doing? :) <h4 align="right" id="counter_text">140</h4></h2>
+        <div class="input-group">
+          <%= render 'welcome/form_tweet' %>
+        </div>
+      </div>
+      <div id="new_tweets"></div>
+      <h2 class="section-title"><strong>Mentions of @<%= current_user.name.gsub(/\s+/, "") %></strong></h2>
+      <%= render 'tweets/listing' %>
+      <%= paginate @tweets %>
+    </div>
+    <div class="col-sm-3" id="sidebar">
+      <%= render 'welcome/info' %>
+      <%= render 'welcome/form_search' %>
+    </div>
+  </div> 
+</div>

@@ -6,9 +6,9 @@
 		<div class="media-body">
 			<p>
 		    <%= link_to tweet.user.username, user_path(tweet.user), class: 'tweet-author' %>
-		    
-		    <% if tweet.content.match(/(@\w+)/) %>
-		    	<% tweet.content.gsub(/@(\w+)/) do |username| %>
+
+	    	<% if tweet.content.match(/(@\w+)/) %>
+		    	<%= tweet.content.gsub(/@(\w+)/) do |username| %>
 		    		<%= link_to(username, user_path("#{$1}".tr('@',''))) %>
 		    	<% end %>
 		    <% else %>

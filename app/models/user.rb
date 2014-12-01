@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   has_many :tweets
 
   has_many :mentions
+  has_many :tweet_mentions, through: :mentions, source: :tweet
   
   has_many :user_followers
   has_many :followers, through: :user_followers
