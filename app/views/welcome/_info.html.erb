@@ -8,7 +8,7 @@
 	</div>
 </div>
 <div class='row' id='follow-info'>
-	<div class='col-sm-4'>
+	<div class='col-sm-4' id='following-count'>
 		<%= link_to following_user_follow_index_path(current_user) do %>
 			<strong><%= current_user.following.count %></strong>
 			<small>following</small>

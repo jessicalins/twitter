@@ -38,6 +38,15 @@ html .navbar-brand {
   overflow: hidden;
 }
 
+html .error-image {
+  background: url(image_path('error.png')) no-repeat 0 0;
+  width: 260px;
+  height: 196px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
 html .navbar > .container .navbar-brand {
   margin-left: -15px;
 }

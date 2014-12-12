@@ -1,7 +1,7 @@
 <div id="info">
 	<strong>Name </strong><%= user.name %> <br>
 	<strong>Bio </strong><%= user.bio %> <br>
-	<strong>Tweets </strong><span id="tweets-count"><%= "#{user.tweets.count}" %></span>
+	<strong>Tweets </strong><span id="tweets-count"><%= user.tweets.count %></span>
 	<div class='row' id='follow-info'>
 		<div class='col-sm-4'>
 			<%= link_to following_user_follow_index_path(user) do %>
