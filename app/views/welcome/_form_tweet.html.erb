@@ -1,16 +1,16 @@
 <%= form_for [@user, @tweet], remote: true, html: { class: 'hide', id: 'tweet_form' } do |f| %>
-	<div class="field">
-		<span class="input-group input-group-lg form-tweet" id="tweet_input">
-			<%= f.text_field :content, class: 'form-control', id: 'tweet_content', maxlength: 140 %>
-		</span>
-	</div>
-	<div class="actions" style="text-align: right;">
-		<span class="input-group-btn">
-			<%= f.submit class: 'btn btn-primary', id: 'tweet_button' %>
-		</span>
-	</div>
+  <div class="field">
+    <span class="input-group input-group-lg form-tweet" id="tweet_input">
+      <%= f.text_field :content, class: 'form-control', id: 'tweet_content', maxlength: 140 %>
+    </span>
+  </div>
+  <div class="actions" style="text-align: right;">
+    <span class="input-group-btn">
+      <%= f.submit class: 'btn btn-primary', id: 'tweet_button' %>
+    </span>
+  </div>
 <% end %>
 
 <span class="input-group input-group-lg tweet_first_form" id="tweet_first_input">
-	<input type="text" class="form-control">
+  <input type="text" class="form-control">
 </span>

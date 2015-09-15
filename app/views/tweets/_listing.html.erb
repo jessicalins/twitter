@@ -1,9 +1,9 @@
 <% if @tweets %>
-	<table class="list-unstyled tweets_list" id="tweets">
-		<tbody class="page">
-			<% @tweets.each do |t| %>
-		    <%= render 'tweets/tweet', tweet: t %>
-		  <% end %>
-		</tbody>
-	</table>
+  <table class="list-unstyled tweets_list" id="tweets">
+    <tbody class="page">
+      <% @tweets.each do |t| %>
+        <%= render 'tweets/tweet', tweet: t %>
+      <% end %>
+    </tbody>
+  </table>
 <% end %>

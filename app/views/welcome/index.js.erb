@@ -1,5 +1,5 @@
 $("#tweets").append("<tbody class='page'>");
 <% @tweets.each do |t| %>
-	$("#tweets").append("<%= j render 'tweets/tweet', tweet: t %>");
+  $("#tweets").append("<%= j render 'tweets/tweet', tweet: t %>");
 <% end %>
 $("#tweets").append("</tbody>");

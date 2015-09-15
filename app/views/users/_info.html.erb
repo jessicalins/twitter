@@ -1,25 +1,25 @@
 <div id="info">
-	<strong>Name </strong><%= user.name %> <br>
-	<strong>Bio </strong><%= user.bio %> <br>
-	<strong>Tweets </strong><span id="tweets-count"><%= user.tweets.count %></span>
-	<div class='row' id='follow-info'>
-		<div class='col-sm-4'>
-			<%= link_to following_user_follow_index_path(user) do %>
-				<strong><%= user.following.count %></strong>
-				<small>following</small>
-		  <% end %>
-		</div>
-		<div class='col-sm-4'>
-			<%= link_to followers_user_follow_index_path(user) do %>
-				<strong><%= user.followers.count %></strong>
-				<small>followers</small>
-			<% end %>
-		</div>
-		<div class='col-sm-4'></div>
-	</div>
+  <strong>Name </strong><%= user.name %> <br>
+  <strong>Bio </strong><%= user.bio %> <br>
+  <strong>Tweets </strong><span id="tweets-count"><%= user.tweets.count %></span>
+  <div class='row' id='follow-info'>
+    <div class='col-sm-4'>
+      <%= link_to following_user_follow_index_path(user) do %>
+        <strong><%= user.following.count %></strong>
+        <small>following</small>
+      <% end %>
+    </div>
+    <div class='col-sm-4'>
+      <%= link_to followers_user_follow_index_path(user) do %>
+        <strong><%= user.followers.count %></strong>
+        <small>followers</small>
+      <% end %>
+    </div>
+    <div class='col-sm-4'></div>
+  </div>
 
-	<div class="list-group menu">
-		<%= link_to 'Tweets', user_path(current_user), class: 'list-group-item active' %>
-	  <a href="#" class="list-group-item">Favorites</a>
-	</div>
+  <div class="list-group menu">
+    <%= link_to 'Tweets', user_path(current_user), class: 'list-group-item active' %>
+    <a href="#" class="list-group-item">Favorites</a>
+  </div>
 </div>

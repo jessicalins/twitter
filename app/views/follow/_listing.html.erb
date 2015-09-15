@@ -1,7 +1,7 @@
 <% if users %>
-	<div class="tweets tweets_list">
-		<% users.each do |user| %>
-	    <%= render 'follow/user', user: user %>
-	  <% end %>
-	</div>
+  <div class="tweets tweets_list">
+    <% users.each do |user| %>
+      <%= render 'follow/user', user: user %>
+    <% end %>
+  </div>
 <% end %>

@@ -2,10 +2,10 @@ class TweetsController < ApplicationController
   respond_to :html, :js
   before_action :set_tweets
 
-	def index
-		@tweets = current_user.tweets
-  	@tweet = Tweet.new
-	end
+  def index
+    @tweets = current_user.tweets
+    @tweet = Tweet.new
+  end
 
   def create
     @tweet = current_user.tweets.new(tweet_params)
@@ -25,7 +25,7 @@ class TweetsController < ApplicationController
   end
 
   def tweet_params
-  	params.require(:tweet).permit(:content)
+    params.require(:tweet).permit(:content)
   end
 
   def set_tweets

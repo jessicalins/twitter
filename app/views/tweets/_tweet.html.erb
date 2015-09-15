@@ -1,16 +1,16 @@
 <tr class="tweet" id="tweet-<%= tweet.id %>">
-	<td class="media">
-		<a class="pull-left">
-		  <img src=<%= tweet.user.avatar.thumb.url %> alt=<%= tweet.user.name %>>
-		</a>
-		<div class="media-body">
-			<p>
-		    <%= link_to tweet.user.username, user_path(tweet.user), class: 'tweet-author' %>
+  <td class="media">
+    <a class="pull-left">
+      <img src=<%= tweet.user.avatar.thumb.url %> alt=<%= tweet.user.name %>>
+    </a>
+    <div class="media-body">
+      <p>
+        <%= link_to tweet.user.username, user_path(tweet.user), class: 'tweet-author' %>
 
-	    	<%= tweet_mention(tweet).html_safe %><br>
-		    <i><small><%= time_ago_in_words(tweet.created_at) %> via twitterfeed</small></i>
-		    <%= delete_tweet(tweet) %>
-		  </p>
-		</div>	
-	</td>
+        <%= tweet_mention(tweet).html_safe %><br>
+        <i><small><%= time_ago_in_words(tweet.created_at) %> via twitterfeed</small></i>
+        <%= delete_tweet(tweet) %>
+      </p>
+    </div>  
+  </td>
 </tr>

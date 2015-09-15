@@ -1,13 +1,13 @@
 <div class="container" id="wrapper">
-	<div class="row">
-		<div class="col-lg-9" id="content">
-			<div class="arrow arrow-top"></div>
-			<%= render 'users/info_profile' %>
-	    <%= render 'tweets/listing' %>
-	    <%= paginate @tweets %>
-		</div>
-		<div class="col-lg-3" id="sidebar">
-			<%= render 'users/info', user: @user %>
-		</div>
-	</div>
+  <div class="row">
+    <div class="col-lg-9" id="content">
+      <div class="arrow arrow-top"></div>
+      <%= render 'users/info_profile' %>
+      <%= render 'tweets/listing' %>
+      <%= paginate @tweets %>
+    </div>
+    <div class="col-lg-3" id="sidebar">
+      <%= render 'users/info', user: @user %>
+    </div>
+  </div>
 </div>
