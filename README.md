@@ -1,5 +1,8 @@
 #Twitter
-A version of 2007 twitter
+A version of 2007 twitter :)
+Preview:
+
+![alt text](https://github.com/jessicalins/twitter/blob/master/preview.png "Index page preview")
 
 ##Installation
 ```
