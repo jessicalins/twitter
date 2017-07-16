@@ -1,9 +1,9 @@
-#Twitter
+# Twitter
 A version of 2007 twitter :)
 
-![alt text](https://github.com/jessicalins/twitter/blob/master/preview.png "Index page preview")
+![alt text](https://github.com/jessicalins/twitter/blob/master/preview.png "Main page preview")
 
-##Installation
+## Installation
 ```
 $ git clone https://github.com/jessicalins/twitter.git
 
@@ -11,7 +11,7 @@ $ cd twitter/
 
 $ bundle install
 ```
-##Database creation
+## Database creation
 ```
 $ rake db:create
 
@@ -26,7 +26,7 @@ $ rake bootstrap:follow
 $ rake bootstrap:bio
 
 ```
-##Troubleshooting
+## Troubleshooting
 
 If you are using mac and are having problems with **imagemagick**, try to install it via homebrew:
 
