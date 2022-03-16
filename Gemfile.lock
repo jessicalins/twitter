@@ -54,7 +54,7 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     erubis (2.7.0)
-    execjs (2.2.2)
+    execjs (2.8.1)
     ffi (1.15.5)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
@@ -138,9 +138,8 @@ GEM
       coffee-rails
     tzinfo (1.2.9)
       thread_safe (~> 0.1)
-    uglifier (2.5.3)
-      execjs (>= 0.3.0)
-      json (>= 1.8.0)
+    uglifier (4.2.0)
+      execjs (>= 0.3.0, < 3)
     warden (1.2.3)
       rack (>= 1.0)
 
